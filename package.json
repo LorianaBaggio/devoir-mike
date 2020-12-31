@@ -1,0 +1,11 @@
+{
+  "name": "devoirmike",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": "git@github.com:LorianaBaggio/devoir-mike.git",
+  "author": "Loriana Baggio <lbaggio@itnetwork.fr>",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
