@@ -21,6 +21,10 @@ export default class bill{
       this.update = updateDate;
   }
 
+  get attributInsert(): Array < string > {
+    return [`idBill`, `idStripe`, `paiement`, `montantHt`, `montantTTC`, `source`, `creation`, `update`]
+  };
+
   get id(): number {
       return this.idBill;
   }

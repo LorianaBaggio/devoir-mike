@@ -1,7 +1,7 @@
 export default class EmailException extends Error {
 
   constructor() {
-      super('Email is not valid')
+      super('Un  compte utilisant cette adresse mail est déjà utilisé')
   }
 
   static checkEmail(email: string): boolean {

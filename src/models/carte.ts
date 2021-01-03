@@ -17,6 +17,10 @@ export default class carte{
       this.default = cardDefault;
   }
 
+  get attributInsert(): Array < string > {
+    return [`idCarte`, `iduser`, `card`, `month`, `year`, `default`]
+  };
+
   get id(): number {
       return this.idCarte;
   }

@@ -19,6 +19,10 @@ export default class song{
       this.type = songType;
   }
 
+  get attributInsert(): Array < string > {
+    return [`idSong`, `name`, `url`, `time`, `creation`, `update`, `type`]
+  };
+
   get id(): number {
       return this.idSong;
   }

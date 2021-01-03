@@ -6,7 +6,7 @@ export default class PasswordException extends Error {
     private static MIN_PASS_SIZE: number = 6;
 
     constructor() {
-        super('Password is not valid')
+        super('Le mot de passe est erronné')
     }
 
     public static isValidPassword(password: string): boolean {
