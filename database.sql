@@ -34,6 +34,15 @@ LOCK TABLES `carte` WRITE;
 UNLOCK TABLES;
 
 --
+-- Dumping data for table `enfant`
+--
+
+LOCK TABLES `enfant` WRITE;
+/*!40000 ALTER TABLE `enfant` DISABLE KEYS */;
+/*!40000 ALTER TABLE `enfant` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping data for table `song`
 --
 
@@ -60,4 +69,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-03 15:44:00
+-- Dump completed on 2021-01-03 18:07:33
