@@ -22,7 +22,7 @@ export class AuthController {
             if (!isOk)
                 throw new Error(`L'utilisateur n'est pas défini`)
 
-            const theToken: any = await sign({ id: user.idUser, name: user.fullname }, < string > process.env.JWT_KEY, { expiresIn: '1m' })
+            const theToken: any = await sign({ id: user.idUser, name: user.fullname }, < string > process.env.JWT_KEY, { expiresIn: '5m' })
 
             const token = {
                 token: theToken,
@@ -44,16 +44,14 @@ export class AuthController {
         let data: any = req.body;
 
         try {
-            if (await user.isExiste(data.email))
+            if (await User.isExiste(data.email))
                 throw new Error(`Un compte utilisant cet adresse mail est déjà enregistré`)
 
-            const User = new user(null, data.prenom, data.nom, data.dateNaissance, data.email, data.password, data.sexe);
-            await User.save();
-            const pass = await PasswordException.hashPassword(data.password);
-            const user = new User(User, data.email, pass);
+            const user = new User(data.idUser, data.prenom, data.nom, data.dateNaissance, data.email, data.password, data.sexe);
             await user.save();
+            const pass = await PasswordException.hashPassword(data.password);
 
-            const theToken: any = await sign({ id: user.idUser, name: user.fullname }, < string > process.env.JWT_KEY, { expiresIn: '1m' })
+            const theToken: any = await sign({ id: user.idUser, nom: user.nom, prenom: user.prenom }, < string > process.env.JWT_KEY, { expiresIn: '5m' })
 
             const token = {
                 token: theToken,

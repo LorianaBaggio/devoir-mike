@@ -10,6 +10,7 @@ export interface userInterfaces {
     creation ? : string;
     update ? : string;
     subscription ? : string;
+    fullname ? : string;
     attributInsert ? : Array < string > ;
     save(): Promise < number > ;
 }

@@ -4,10 +4,13 @@ import EmailException from '../exception/EmailException';
 import PasswordException from '../exception/PasswordException';
 
 export default class user{
+  save() {
+      throw new Error('Method not implemented.');
+  }
   
-  private idUser: number;
-  private prenom: string;
-  private nom: string;
+  idUser: number;
+  prenom: string;
+  nom: string;
   private email: string;
   private password: string = '';
   private sexe: string;
@@ -110,7 +113,7 @@ export default class user{
                     User.dateNaiss = new String(User.dateNaissance)
                     User.id = User.idUser;
                     newUser = new User(User);
-                    data.push(new User(newUser, userEmail, userPassword));
+                    data.push(new User(newUser, User.email, User.password));
                 }
                 console.log(data);
                 resolve(data)
