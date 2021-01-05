@@ -14,7 +14,7 @@ export const authMidd = (req: Request, res: Response, next: () => void) => {
         else
             throw new Error(`Une ou plusieurs données sont erronnées`)
     } catch (err) {
-        return res.status(401).json({ error: true, message: err.message }).end();
+        return res.status(409).json({ error: true, message: err.message }).end();
     }
 
 }
@@ -52,7 +52,7 @@ export const registerMidd = (req: Request, res: Response, next: () => void) => {
         next()
 
     } catch (err) {
-        return res.status(401).json({ error: true, message: err.message }).end();
+        return res.status(400).json({ error: true, message: err.message }).end();
     }
 }
 
@@ -89,6 +89,6 @@ export const loginMidd = (req: Request, res: Response, next: () => void) => {
         next()
 
     } catch (err) {
-        return res.status(401).json({ error: true, message: err.message }).end();
+        return res.status(400).json({ error: true, message: err.message }).end();
     }
 }

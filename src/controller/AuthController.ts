@@ -28,9 +28,9 @@ export class AuthController {
                 token: theToken,
                 expired: await ( < any > decode(theToken)).exp
             }
-            return res.status(201).json(token);
+            return res.status(200).json(token);
         } catch (err) {
-            return res.status(401).json({ error: true, message: err.message }).end();
+            return res.status(409).json({ error: true, message: err.message }).end();
         }
     }
 
@@ -57,10 +57,10 @@ export class AuthController {
                 token: theToken,
                 expired: await ( < any > decode(theToken)).exp
             }
-            return res.status(201).json(token);
+            return res.status(200).json(token);
 
         } catch (err) {
-            return res.status(401).json({ error: true, message: err.message }).end();
+            return res.status(409).json({ error: true, message: err.message }).end();
         }
     }
 

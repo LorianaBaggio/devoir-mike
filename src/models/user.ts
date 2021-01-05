@@ -1,4 +1,4 @@
-import MySQL from '../db/MySQL';
+import MySQL, { jointureInterface } from '../db/MySQL';
 
 import EmailException from '../exception/EmailException';
 import PasswordException from '../exception/PasswordException';

@@ -8,7 +8,7 @@ import { registerMidd, loginMidd, authMidd } from '../middlewares/auth.middlewar
 const route: Router = Router();
 
 route.get('/', authMidd, (req: Request, res: Response) => {
-    return res.end('<h1>OOUUUIII tu es connecté</h1>')
+    return res.end('<h1>L\'utilisateur a été authentifié avec succès</h1>')
 })
 route.post('/login', loginMidd, AuthController.login)
 route.post('/register', registerMidd, AuthController.register)
