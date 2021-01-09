@@ -1,4 +1,3 @@
-# devoir-mike
 
 yarn init
 
@@ -9,6 +8,14 @@ yarn add bcrypt // https://www.npmjs.com/package/bcrypt
 yarn add mysql // https://www.npmjs.com/package/mysql
 
 
+yarn add body-parser cors
+
+--- Dependence dev ---
+yarn add typescript @types/express ts-node @types/dotenv @types/bcrypt @types/mysql @types/body-parser @types/cors --dev
+
+
+--- Global ---
+npm i nodemon pm2 -g
 yarn add body-parser cors jsonwebtoken
 
 --- Dependence dev ---
