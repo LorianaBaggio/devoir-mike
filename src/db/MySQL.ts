@@ -74,7 +74,7 @@ export default abstract class MySQL {
      *
      * 
      * @static
-     * @param {('client' | 'personne')} table
+     * @param {('user')} table
      * @param {*} [where]
      * @returns {*}
      * @memberof MySQL
