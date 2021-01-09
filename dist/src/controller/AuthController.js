@@ -39,10 +39,10 @@ AuthController.login = (req, res) => __awaiter(void 0, void 0, void 0, function*
             token: theToken,
             expired: yield jsonwebtoken_1.decode(theToken).exp
         };
-        return res.status(201).json(token);
+        return res.status(200).json(token);
     }
     catch (err) {
-        return res.status(401).json({ error: true, message: err.message }).end();
+        return res.status(409).json({ error: true, message: err.message }).end();
     }
 });
 /**
@@ -64,9 +64,9 @@ AuthController.register = (req, res) => __awaiter(void 0, void 0, void 0, functi
             token: theToken,
             expired: yield jsonwebtoken_1.decode(theToken).exp
         };
-        return res.status(201).json(token);
+        return res.status(200).json(token);
     }
     catch (err) {
-        return res.status(401).json({ error: true, message: err.message }).end();
+        return res.status(409).json({ error: true, message: err.message }).end();
     }
 });
